@@ -1,0 +1,33 @@
+package pm;
+
+import java.io.*;
+import java.util.*;
+
+import am.Car;
+
+public class Sub01 {
+	public static void run() {
+		File file = new File("C:\\Users\\KOSMO\\OneDrive\\Desktop\\수업자료\\java\\car_list.txt");
+		try {
+			BufferedReader reader=new BufferedReader(new FileReader(file));
+			String line="";
+			StringTokenizer st=null;
+			
+			while((line=reader.readLine())!=null) {
+				st=new StringTokenizer(line,",");
+				String no=st.nextToken();
+				String company=st.nextToken();
+				String model=st.nextToken();
+				String color=st.nextToken();
+				String distance=st.nextToken();
+				String date=st.nextToken();
+				Car carclass=new Car(Integer.parseInt(no),company,model,color,Integer.parseInt(distance),date);
+			}
+			
+			System.out.println("read complete");
+		}catch(Exception e) {
+			System.out.println("Error : "+e.toString());
+			System.out.println("read Fail");
+		}
+	}
+}

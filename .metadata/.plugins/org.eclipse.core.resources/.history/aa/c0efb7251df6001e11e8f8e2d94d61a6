@@ -1,0 +1,44 @@
+package am;
+import java.util.*;
+public class Sub02 {
+	public static void run() {
+		System.out.println("매출현황");
+		boolean run=true;
+		
+		Scanner scan=new Scanner(System.in);
+		String[] names=new String[100];
+		String[] prices=new String[100];
+		String[] qnt=new String[100];
+		
+		names[0]="";
+		int count=0;
+		
+		while(run) {
+			System.out.println("**********************");
+			System.out.println("\t1.register|2.status|3.exit");
+			System.out.println("**********************");
+			System.out.print("선택 >>>>> ");
+			
+			String menu = scan.nextLine();
+
+			switch(menu) {
+			case "1":
+				if(count < 1) {
+					System.out.println("등록된 상품 없음");
+				}else {
+					for (int i=0;i<count;i++) {
+						int sum=prices[i]*qnt[i];
+						System.out.printf("%s\t%d만원\t%d개\t%d만원\n*************************\n",names[i],prices[i],qnt[i],sum);
+				break;
+			case "2":
+				break;
+			case "0":
+				break;
+			default:
+					System.out.println("0-2중 선택 ");
+			
+				
+		
+		
+	}
+}

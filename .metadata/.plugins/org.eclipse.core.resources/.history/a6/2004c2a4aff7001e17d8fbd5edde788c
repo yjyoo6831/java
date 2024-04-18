@@ -1,0 +1,21 @@
+package am;
+
+public class Student {
+	//필드(속성) : 공통적인 값을 가지는 것 
+	String no;
+	String name;
+	String address;
+	String phone;
+	
+	//생성자
+	public Student() {
+		
+	}
+	//method - 명령어의 집합
+	
+	public void print() {
+		System.out.printf("학번:%s 이름:%s 주소:%s 전화:%s\n",no,name,address,phone);
+	}
+	
+	
+}

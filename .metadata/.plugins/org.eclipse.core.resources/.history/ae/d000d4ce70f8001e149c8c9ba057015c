@@ -1,0 +1,27 @@
+package am;
+import java.util.*;
+public class Sub01 {
+	public static void run() {
+		ArrayList<Car> cars=new ArrayList<Car>();
+		
+		Car car1=new Car();
+		
+		
+		
+		car1 = new Car("Tesla","model3");
+		car1.setColor("white");
+		
+		car1.setDistance(1000000);
+		car1.setDate("2024-03");
+		cars.add(car1);
+		
+		
+		for (Car car:cars) {
+			System.out.printf("%s\t%s\t%s\t%,dkm\t%s",car.getCompany(),car.getModel(), 
+									car.getColor(),car.getDistance(), car.getDate());
+			System.out.println("");
+			
+		}
+		
+	}
+}

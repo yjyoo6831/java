@@ -1,0 +1,22 @@
+package am;
+
+public class Sub02 {
+	public static void run() {
+		System.out.println("What's the class");
+		//Student 라는 클래스를 가지고 s1에 저장을 함. s1 은 각각의 속성이나 메소드를 사용할 수 있음.
+		Student s1=new Student(); //생성자1 constructor
+		
+		s1.no="100";
+		s1.name="예진";
+		s1.address="일본";
+		s1.phone="8669-68";
+		s1.print();
+		System.out.println("****************");
+		
+		Student s2=new Student("101","예진"); //생성자2
+		s2.print();
+		s2.address="대전";
+		s2.print();
+		
+	}
+}

@@ -1,0 +1,8 @@
+package pm;
+import java.util.*;
+public class Sub02 {
+	public static void run() {
+		Scanner scan=new Scanner(System.in);
+		ArrayList<Integer> nums=new ArrayList<>();
+	}
+}

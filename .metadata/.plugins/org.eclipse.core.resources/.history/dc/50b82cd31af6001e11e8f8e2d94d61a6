@@ -1,0 +1,16 @@
+package am;
+import java.util.*;
+public class Sub02 {
+	public static void run() {
+		System.out.println("매출현황");
+		boolean run=true;
+		System.out.println("**********************");
+		System.out.println("\t1.register|2.status|3.exit");
+		System.out.println("**********************");
+		
+		Scanner scan=new scanner(System.in);
+		String menu= scan.nextLine();
+		
+		
+	}
+}

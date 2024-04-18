@@ -1,0 +1,47 @@
+package address;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		boolean run=true;
+		Scanner scan=new Scanner(System.in);
+		AddressDAO dao=new AddressDAO();
+		while(run) {
+		// TODO Auto-generated method stub
+			System.out.println("========= Manage Address ==========");
+			System.out.println("1. 주소등록 |2. 주소 조회 |3. 주소목록 |4. 주소삭제 |0. exit");
+			System.out.println("===================================");
+			
+			System.out.println("선택 : ");
+			String menu=scan.nextLine();
+			switch(menu) {
+			case "1":
+				break;
+			case "2":
+				System.out.println("조회할 이름 : ");
+				String name=scan.nextLine();
+				Address ad=dao.read(name);
+				System.out.println("번호 : "+ad.getNo());
+				System.out.println("폰 번호 : "+ad.getPhone());
+				System.out.println("주소 : "+ad.getAddress());
+				break;
+			case "3":
+				ArrayList<Address> array=dao.list();
+				for (Address j:array) {
+					System.out.println(j.toString());
+				}
+				
+				break;
+			case "4":
+				break;
+			case "0":
+				run=false;
+				break;
+			default:
+				System.out.println("0-4중 입력");
+			} //switch
+		} //while
+		System.out.println("프로그램을 종료");
+	} //main
+}  //class

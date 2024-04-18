@@ -1,0 +1,9 @@
+package am;
+
+public class Sub01 {
+	public static void run() {
+		System.out.println("\n-----------------");
+		System.out.println("1.register | 2.score list | 3. check score| 4. delate score | 0. exit");
+		
+	}
+}

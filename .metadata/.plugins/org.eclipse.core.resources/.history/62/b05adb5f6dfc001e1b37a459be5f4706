@@ -1,0 +1,9 @@
+package product;
+//interface 는 기본 설계도
+
+import java.util.*;
+public interface ProductInter {
+	public ArrayList<ProductVO> list();
+		
+	
+}

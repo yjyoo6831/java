@@ -1,0 +1,16 @@
+package professor;
+
+import java.sql.Connection;
+import java.util.*;
+public class ProDAO {
+	public ArrayList<ProVO> list(){
+		ArrayList<ProVO> list= new ArrayList<ProVO>();
+		try {
+			String sql="select * from professors";
+			//Connection con=Database.CON;
+		} catch (Exception e) {
+			System.out.println("교수목록 : "+e.toString());
+		}
+		return list;
+	}
+}

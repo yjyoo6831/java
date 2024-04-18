@@ -1,0 +1,14 @@
+package ex01;
+
+public class Sub03 {
+	public static void run() {
+		//integer type
+		int num=10;
+		
+		// float type
+		float num2=10.5f;
+		
+		System.out.println("num : ",num,"num2 : ",num2);
+	}
+
+}

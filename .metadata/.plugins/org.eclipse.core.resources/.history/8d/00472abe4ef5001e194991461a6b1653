@@ -1,0 +1,19 @@
+package ex01;
+
+public class Sub04 {
+	public static void run() {
+		// 산술 연산자
+		int num1=10;
+		int num2=3;
+		int sum=num1+num2;
+		int sub=num1-num2;
+		int mul=num1*num2;
+		int div=num1/num2;
+		
+		System.out.printf("%d + %d = %d\n",num1,num2,sum);
+		System.out.printf("%d - %d = %d\n",num1,num2,sub);
+		System.out.printf("%d * %d = %d\n",num1,num2,mul);
+		System.out.printf("%d / %d = %d\n",num1,num2,div);
+		
+	}
+}

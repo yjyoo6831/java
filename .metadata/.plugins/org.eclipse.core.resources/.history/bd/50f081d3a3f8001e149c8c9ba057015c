@@ -1,0 +1,56 @@
+package pm;
+
+import java.io.*;
+import java.util.Scanner;
+
+import am.Address;
+
+public class Sub02 {
+	public static void insert() {
+		System.out.println("*************주소등록***********");
+		File file=new File("C:\\Users\\KOSMO\\OneDrive\\Desktop\\수업자료\\java\\address.txt");
+		Scanner scan=new Scanner(System.in);
+		try {
+			FileWriter writer=new FileWriter(file,true);
+			Address ad1=new Address();
+			System.out.print("no : ");
+			ad1.setNo(Integer.parseInt(scan.nextLine()));
+			System.out.print("phone : ");
+			ad1.setName(scan.nextLine());
+			System.out.print("phone : ");
+			ad1.setPhone(scan.nextLine());
+			System.out.print("address : ");
+			ad1.setAddress(scan.nextLine());
+			writer.write(ad1.getNo()+","+ad1.getName()+","+ad1.getPhone()+","+ ad1.getAddress());
+			writer.close();
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("파일 없음");
+			
+		}
+		
+	}
+	public static void run() {
+		File file=new File("C:\\Users\\KOSMO\\OneDrive\\Desktop\\수업자료\\java\\address.txt");
+		try {
+			BufferedReader reader=new BufferedReader(new FileReader(file));
+			String line="";
+			String[] items=new String[4];
+			while((line=reader.readLine())!=null){
+				items=line.split(",");
+				Address ad=new Address();
+				ad.setNo(Integer.parseInt(items[0]));
+				ad.setName(items[1]);
+				ad.setPhone(items[2]);
+				ad.setAddress(items[3]);
+				
+				System.out.println(ad.toString());
+								
+			}
+		}catch(Exception e){
+			System.out.println("Error : "+e.toString());
+		}
+	}
+}

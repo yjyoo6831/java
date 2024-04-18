@@ -1,0 +1,15 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class whileroop {
+	public static void run() {
+		Scanner s=new Scanner(System.in);
+		boolean run=true;
+		while(run) {
+			System.out.println("=====================");
+			System.out.println("1.100까지 합계|2.100까지 홀수합|3.100까지 짝수합");
+			System.out.println("=====================");
+		}
+	}
+}

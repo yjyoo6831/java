@@ -1,0 +1,32 @@
+package am;
+
+public class address { //자바빈
+	private String name;
+	private String Phone;
+	private String address;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhone() {
+		return Phone;
+	}
+	public void setPhone(String phone) {
+		Phone = phone;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "address [name=" + name + ", Phone=" + Phone + ", address=" + address + "]";
+	}
+}
+
+

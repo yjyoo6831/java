@@ -1,0 +1,15 @@
+package ex01;
+
+public class Sub03 {
+	public static void run() {
+		//integer type
+		int num=10;
+		
+		// float type
+		float num2 = 10.5f; 
+		double num3 = 10.5;  // float 과 같은 실수 타입이지만, double  은 float 보다 공간이 두배로 f를 안붙여도 됨. 
+		
+		System.out.printf("num : %d \nnum2 : %f",num,num2);
+	}
+
+}

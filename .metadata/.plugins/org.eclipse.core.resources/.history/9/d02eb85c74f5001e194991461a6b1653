@@ -1,0 +1,10 @@
+package ex01;
+
+public class array {
+	public static void run() {
+		int[] scores=new int[] {90, 30, 35, 90, 98};
+		System.out.println(scores[0]);
+		
+		
+	}
+}

@@ -1,0 +1,87 @@
+package product;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+			boolean run = true;
+			Scanner scanner = new Scanner(System.in);
+			ProductDAO dao=new ProductDAO();
+
+			while(run) {
+				System.out.println("\n============================");
+				System.out.println("1.등록|2.조회|3.목록|4.삭제|0.종료");
+				System.out.println("============================");
+				System.out.println("선택>");
+				String menu= scanner.nextLine();
+				switch(menu) {
+				case "1" :
+					ProductVO vo1=new ProductVO();
+					vo1.setCode(dao.getCode());
+					System.out.println("code : "+vo1.getCode());
+					System.out.print("상품이름 : ");
+					String n1=scanner.nextLine();
+					if(n1=="") {System.out.println("상품등록취소 "); break;}
+					else {
+						vo1.setName(n1);
+					}
+					while(true) {
+						System.out.print("price : ");
+						String price1=scanner.nextLine();
+						if(price1=="") {
+							System.out.println("상품 등록 취소 ");
+							break;
+						}
+						if(isNumber(price1)) {
+							vo1.setPrice(Integer.parseInt(price1));
+							break;
+						}
+					}
+					break;
+				case "2" : //조회
+					System.out.println("조회할 상품 코드 :");
+					String c2=scanner.nextLine();
+					if(c2=="") {
+						System.out.println("조회작업을 취소합니다");
+						break;
+					}
+					ProductVO v2=dao.read(c2);
+					if(v2.getCode()==null) {
+						System.out.println(c2+"번 상품이 존재하지 않음");
+					}else {
+						System.out.println(v2.toString());
+					}
+					
+					break;
+				case "3" : //상품목록
+					//ArrayList<ProductVO> array=dao.list();
+					//for(ProductVO vo:array.list()) {
+					for(ProductVO vo:dao.list()) {
+						System.out.println(vo.toString());
+					}
+					break;
+				case "4" :
+					break;
+				case "0" :
+					System.out.println("프로그램을 종료합니다.");
+					run = false;
+					break;
+				default:
+					System.out.println("0~4 메뉴를 입력하세요!");
+					break;
+				}//switch   
+			}//while
+	}
+	public boolean isNumber(String str){ //whether value is number or no
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (Exception e) {
+			System.out.println("숫자를 입력하3");
+				return false;
+		}
+	} //isNumber() method
+
+} //class

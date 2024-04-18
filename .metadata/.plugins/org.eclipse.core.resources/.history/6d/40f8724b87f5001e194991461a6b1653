@@ -1,0 +1,15 @@
+package ex01;
+
+import java.util.*;
+public class Sub10 {
+	public static void run() {
+		boolean run=true;
+		Scanner s=new Scanner(System.in);
+		while(run) {
+			System.out.println("\n\n--------------");
+			System.out.println("1.매출등록|2.매출현황|3.종료");
+			System.out.println("\n\n--------------");
+			
+		}
+	}
+}

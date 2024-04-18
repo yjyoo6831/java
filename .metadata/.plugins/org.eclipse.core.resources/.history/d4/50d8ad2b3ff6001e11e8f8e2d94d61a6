@@ -1,0 +1,22 @@
+package pm;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<String> names=new ArrayList<>();
+		names.add("동길");
+		names.add("청심");
+		names.add("dPwls");
+		
+		
+		for (int i=0;i<names.size();i++) {
+			String name=names.get(i);
+			System.out.println(name);
+			
+		}
+		
+
+
+	}
+
+}

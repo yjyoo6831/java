@@ -1,0 +1,9 @@
+package professor;
+
+import java.util.*;
+public class ProDAO {
+	public ArrayList<ProVO> list(){
+		ArrayList<ProVO> list= new ArrayList<ProVO>();
+		return list;
+	}
+}

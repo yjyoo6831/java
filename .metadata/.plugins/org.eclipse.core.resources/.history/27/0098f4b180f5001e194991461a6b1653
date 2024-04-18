@@ -1,0 +1,42 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class Sub09 {
+	public static void run() {
+		Scanner s=new Scanner(System.in);
+		boolean run=true;
+		while(run) {
+			System.out.println("*********************");
+			System.out.println("1.주소등록|2.주소출력|0.종료");
+			System.out.println("*********************");
+			System.out.print("선택 >>>>> ");
+			String menu = s.nextLine();
+			String[] name=new String[100];
+			String[] address=new String[100];
+			String[] phone=new String[100];
+			name[0]="예진";
+			address[0]="서울시";
+			phone[0]="777-8888";
+			int count=2;
+			
+			switch(menu) {
+			case "1":
+				break;
+			case "2":
+				for(int i=0;i<name.length;i++) {
+					System.out.printf("%s\t%s\t%s\n",name[i],address[i],phone[i]);
+				}
+				
+				break;
+
+			case "0":
+				System.out.println("bye bye");
+				run=false;
+				break;
+			default:
+				System.out.println("0-2 중 선택 ");
+			}
+			}
+		}
+}

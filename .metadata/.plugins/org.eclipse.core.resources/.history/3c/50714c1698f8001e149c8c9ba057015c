@@ -1,0 +1,14 @@
+package pm;
+
+import java.io.*;
+
+public class Sub01 {
+	public static void run() {
+		File file = new File("C:\\Users\\KOSMO\\OneDrive\\Desktop\\수업자료\\java\\car_list.txt");
+		try {
+			BufferedReader readr=new BufferedReader(new FileReader(file)); 
+		}catch(Exception e) {
+			System.out.println("Error : "+e.toString());
+		}
+	}
+}

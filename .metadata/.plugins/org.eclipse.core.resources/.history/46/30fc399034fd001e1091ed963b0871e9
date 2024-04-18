@@ -1,0 +1,45 @@
+package sale;
+
+import java.util.Scanner;
+
+import product.ProductDAO;
+
+public class Sub {
+	public static void run() {
+		boolean run = true;
+		Scanner scanner = new Scanner(System.in);
+		SaleDAO dao=new SaleDAO();
+
+		while(run) {
+			System.out.println("\n============================");
+			System.out.println("1.등록|2.조회|0.종료");
+			System.out.println("============================");
+			System.out.println("선택>");
+			String menu= scanner.nextLine();
+			switch(menu) {
+			case "6" :
+				break;
+			case "1" :
+				break;
+			case "2" :
+				break;
+			case "3" :
+				for(SaleVO vo3 : dao.list()) {
+					System.out.println(vo3.toString());
+				}
+				break;
+			case "4" :
+				break;
+			case "5" :
+				break;
+			case "0" :
+				System.out.println("프로그램을 종료합니다.");
+				run = false;
+				break;
+			default:
+				System.out.println("0~4 메뉴를 입력하세요!");
+				break;
+			}//switch   
+		}//while
+	}
+}

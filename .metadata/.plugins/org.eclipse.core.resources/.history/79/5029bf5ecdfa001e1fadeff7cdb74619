@@ -1,0 +1,29 @@
+package address;
+
+import java.util.*;
+import java.io.*;
+public class AddressDAO { //DAO: Data Access Object
+	File file=new File("C:\\data\\java\\ex05_240415\\address.txt");
+	//주소목록
+	public ArrayList<Address> list(){
+		ArrayList<Address> array = new ArrayList<Address>();
+		try {
+			BufferedReader reader=new BufferedReader(new FileReader(file));
+			String line="";
+			while((line=reader.readLine())!=null) {
+				String[] items=line.split("\\|");
+				Address ad=new Address();
+				ad.setNo(Integer.parseInt(items[0]));
+				ad.setName(items[1]);
+				ad.setPhone(items[2]);
+				ad.setAddress(items[3]);
+				
+				array.add(ad);
+			}
+		}catch(Exception e) {
+			System.out.println("주소목록 : " + e.toString());
+		}
+		
+		return array; 
+	}
+}

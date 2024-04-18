@@ -1,0 +1,17 @@
+package ex01;
+
+public class Sub05 {
+	public static void run() {
+		// control loop
+		int score= 87;
+		String grade = "";
+		
+		if (score>=90) {
+			grade="A";
+		}
+		else {
+			grade="F";
+		}
+		System.out.printf("%d score : %s",score,grade);
+	}
+}

@@ -1,0 +1,36 @@
+package am;
+import java.util.*;
+public class Sub01 {
+	 public static void run() {
+		 System.out.println("성적관리 프로그램");
+		 boolean stop=false;
+		 Scanner scan=new Scanner(System.in);
+		 while (!stop) {
+			 System.out.println("****************************");
+			 System.out.println("1.등록|2.출력|0.종료");
+			 System.out.println("****************************");
+			 System.out.print("선택 : ");
+			 String menu = scan.nextLine();
+			 
+			 switch(menu) {
+			 case "1":
+				 break;
+			 case "2":
+				 break;
+			 case "0":
+				 stop=true;
+				 System.out.println("종료");
+				 break;
+			default:
+				System.out.println("0-2중 선택");
+			
+			
+				 
+			 }
+			 
+			 
+			 
+		 }
+		 
+	 }
+}

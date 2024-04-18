@@ -1,0 +1,52 @@
+package am;
+import java.util.*;
+public class Sub01 {
+	public static void run() {
+		ArrayList<Car> cars=new ArrayList<Car>();
+		Car car=new Car();
+		car = new Car(1,"Tesla","model3","white",100000,"2024-01");		
+		cars.add(car);
+		car = new Car(2,"Tesla","model4","black",10000,"2024-02");		
+		cars.add(car);
+		car = new Car(3,"Tesla","model5","rainbow",1000,"2024-03");		
+		cars.add(car);
+		
+		Scanner scan=new Scanner(System.in);
+		
+		//System.out.println("Company\tModel\tColor\tDistance\tDate\n");
+		//for (Car car:cars) {
+		//	System.out.printf("%s\t%s\t%s\t%,dkm\t%s",car.getCompany(),car.getModel(), 
+		//							car.getColor(),car.getDistance(), car.getDate());
+		//	System.out.println("");
+		
+		boolean run=true;	
+		while(run) {
+	         System.out.println("--------------------------------------------");
+	         System.out.println("1.차량등록|2.차량조회|3.차량목록|4.차량삭제|0.종료");
+	         System.out.println("--------------------------------------------");
+	         System.out.print("선택>");
+	         String menu=scan.nextLine();
+			switch(menu) {
+				case "1": //등록
+					break;
+				case "2": //차 별 조회
+					break;
+				case "3": //목록
+					for (Car j:cars) {
+						System.out.printf("%s\t%s\t%s\t%,dkm\t%s",j.getCompany(),j.getModel(),j.getColor(),j.getDistance(),j.getDate());	}//for				}
+				case "4":
+					break;
+				case "0":
+					System.out.println("프로그램을 종료합니다.");
+					run=false;
+					break;
+				default:
+					System.out.println("0~4메뉴를 선택하세요!");
+				
+ 
+					//System.out.println("등록된 차량: "+cars.size());
+
+	         }//switch
+		} //while
+	}//run()
+} //class

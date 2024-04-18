@@ -1,0 +1,49 @@
+package am;
+import java.util.*;
+public class Sub01 {
+	 public static void run() {
+		 System.out.println("성적관리 프로그램");
+		 boolean stop=false;
+		 Scanner scan=new Scanner(System.in);
+		 String[] names=new String[100];
+		 int[] kors=new int[100];
+		 int[] engs=new int[100];
+		 int[] maths=new int[100];
+		 names[0]="dog";kors[0]=98;engs[0]=88;maths[0]=99;
+		 names[1]="cat";kors[1]=9;engs[1]=8;maths[1]=9;
+		 int count=2;
+		 
+		 
+		 while (!stop) {
+			 System.out.println("****************************");
+			 System.out.println("1.등록|2.출력|0.종료");
+			 System.out.println("****************************");
+			 System.out.print("선택 : ");
+			 String menu = scan.nextLine();
+			 
+			 switch(menu) {
+			 case "1":
+				 break;
+			 case "2":
+				 for (int i=0;i<count;i++) {
+					 System.out.print("%s\t%d\t%d\t%d\t",names[i],kors][i],engs[i],maths[i]);
+				 }
+				 
+				 break;
+			 case "0":
+				 stop=true;
+				 System.out.println("종료");
+				 break;
+			default:
+				System.out.println("0-2중 선택");
+			
+			
+				 
+			 }
+			 
+			 
+			 
+		 }
+		 
+	 }
+}

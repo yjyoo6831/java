@@ -1,0 +1,50 @@
+package sale;
+import product.ProductVO; //기능별로 패키지를 나누느냐, VO,DAO 별로 나누느냐 
+
+import java.text.DecimalFormat;
+import java.util.*; //Date 포맷주려면 java.util 꺼를 가져와야함
+
+public class SaleVO extends ProductVO{ //자바빈 oracle 에 있는 변수를 똑같이 써야됨
+	private int seq;
+	private String code;
+	private Date sale_date;
+	private int qnt;
+	
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public Date getSale_date() {
+		return sale_date;
+	}
+	public void setSale_date(Date sale_date) {
+		this.sale_date = sale_date;
+	}
+	public int getQnt() {
+		return qnt;
+	}
+	public void setQnt(int qnt) {
+		this.qnt = qnt;
+	}
+	@Override
+	public String toString() {
+		DecimalFormat df=new DecimalFormat("#,####");
+		String fmtPrice=df.format(getPrice());
+		return "SaleVO [seq=" + seq + ", 상품 code=" + code + ", 판매일 =" + sale_date + ", 판매수량=" + qnt + ", Name="
+				+ getName() + ", 상품가격 Price=" + getPrice() + "]";
+	}
+	 
+	
+	
+	
+	
+
+}

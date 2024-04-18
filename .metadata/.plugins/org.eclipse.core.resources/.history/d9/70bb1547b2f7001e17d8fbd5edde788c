@@ -1,0 +1,26 @@
+package am;
+
+public class Score {
+	//필드(속성)
+	String name;
+	int kor;
+	int eng;
+	int math;
+	//생성자 constructor
+	public Score() {
+		}
+	//return 값을 돌려줄 타입을 public 메소드첫줄에 적어줌
+	public double total() {
+		int total=kor+eng+math;
+		return total;
+		
+	}
+	public double avg() {
+		double avg=(kor+eng+math)/3;
+		return avg;
+	}
+	public void print() {
+		System.out.println("%s\t%d\t%d\t%d\t%d,%.2f",name,kor,eng,math,total(),avg());
+	}
+	
+}

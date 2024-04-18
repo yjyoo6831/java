@@ -1,0 +1,36 @@
+package pm;
+import java.util.*;
+public class Sub01 {
+	public static void run() {
+		System.out.println("Sub01....");
+		boolean run =true;
+		Scanner scan=new Scanner(System.in);
+		
+		while(run) {
+			System.out.println("\n-------------------------------------------------------------");
+			System.out.println("| 1.register | 2.list | 3. check | 4. delate score | 0. exit | ");
+			System.out.println("-------------------------------------------------------------");
+			System.out.println("선택 : ");
+			String menu=scan.nextLine();
+			switch(menu) {
+			case "0":
+				
+				run=false;
+				break;
+			case "1":
+				break;
+			case "2":
+				break;
+			case "3":
+				break;
+			case "4":
+				break;
+			default:
+					System.out.println("0-4 메뉴 중 선택 ");
+					
+				
+			}//switch
+		}//while
+		System.out.println("BY~~~~~~~E😀😀");
+	}
+}
